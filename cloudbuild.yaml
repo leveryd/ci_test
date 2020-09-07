@@ -1,0 +1,8 @@
+steps:
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/quixotic-treat-286702/github.com/leveryd/ci_test', '.']
+# Push the container image to Container Registry
+# Deploy container image to Cloud Run
+images:
+- gcr.io/quixotic-treat-286702/github.com/leveryd/ci_test
