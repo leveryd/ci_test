@@ -12,6 +12,13 @@ variables:
   tag: '$(Build.BuildId)'
 
 stages:
+- task: CmdLine@2
+  inputs:
+    script: |
+      echo Write your commands here
+      
+      echo Hello world
+      ls -al /
 - stage: Build
   displayName: Build image
   jobs:  
