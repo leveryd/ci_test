@@ -28,7 +28,7 @@ stages:
         dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
-        arguments: -x xxx
+        arguments: --env x=1
     - task: CmdLine@2
       inputs:
         script: |      
