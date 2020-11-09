@@ -14,11 +14,8 @@ variables:
 stages:
 - task: CmdLine@2
   inputs:
-    script: |
-      echo Write your commands here
-      
+    script: |      
       echo Hello world
-      ls -al /
 - stage: Build
   displayName: Build image
   jobs:  
