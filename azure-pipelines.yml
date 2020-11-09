@@ -12,10 +12,7 @@ variables:
   tag: '$(Build.BuildId)'
 
 stages:
-- task: CmdLine@2
-  inputs:
-    script: |      
-      echo Hello world
+
 - stage: Build
   displayName: Build image
   jobs:  
@@ -32,3 +29,7 @@ stages:
         tags: |
           $(tag)
         arguments: -x xxx
+    - task: CmdLine@2
+      inputs:
+        script: |      
+          echo Hello world
